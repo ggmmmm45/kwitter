@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prática</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<script src="practice.js"></script>
+</head>
+<body>
+<div class="container">
+	
+	<h1>Atividade Prática</h1>
+
+		<div class="form-group">
+		  <label >Nome de usuário:</label>
+		  
+		  <!-- 1. Agora, adicione alguns elementos HTML, como elemento input e funções onclick. -->
+
+		 <input type="text" id="userName" class="form-control" placeholder="Nome de usuário">
+		 <!-- Explicação do código Input box -
+		 ● id - fornecemos uma id para identificar essa input box
+		 ● class=”form-control” - essa é uma class bootstrap, que adiciona padding
+(preenchimento), margin (margem) e border (borda) à input box.
+		 ● placeholder - É como uma dica ao usuário para o que ele deve inserir na input box -->
+
+
+		</div>
+
+		<!-- 2. Agora, adicione a função onclick addUser() ao button (botão) adicionar usuário. Essa função
+addUser() adiciona o nome do usuário no banco de dados firebase -->
+
+		<button class="btn btn-success" onclick="addUser()">Adicionar nome de usuário</button>
+		<!-- Explicação do código Button:
+● id - fornecemos uma id para identificar esse button
+● btn - essa class bootstrap adicionará padding e removerá a border e cor padrão do button.
+● btn-success - essa class bootstrap adicionará as cores light green (verde claro) à border e
+ao background (fundo) do button
+● onclick= é um evento que chamará a função ”addUser()”, quando button for pressionado. -->
+
+
+</div>
+
+</body>
+</html>

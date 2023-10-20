@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kwiter</title>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="kwitter.js"></script>
+</head>
+<body>
+
+<center>
+	<h1 class="header">	
+		Kwitter	<sup>
+	<img src="m2.png">
+	</sup>
+</h1>
+
+	<div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 login_div">
+
+	<img src="logo.png" class="logo">
+		<h3 >See what is happening in the world right now</h3>
+
+		<h4 >Join Kwitter today</h4>
+		
+		<div class="form-group">
+		  <label >User Name:</label>
+
+		  <!-- adicione uma input box (caixa de inserção) para aceitar o nome do usuário. -->
+		 <input type="text" id="user_name" class="form-control" placeholder="User Name">
+		 <!-- Explicação do código para Input box:
+		 ● type = “text ” - denota que essa input box aceitará a inserção em fora de texto
+		 ● id - fornecemos id para a identificação da input box
+		 ● class=”form-control” - essa é uma class bootstrap class, que adiciona padding
+		 (preenchimento), margin (margem) e border (borda) à input box.
+		 ● placeholder - é a dica ao usuário para o que ele deve inserir na input box-->
+		
+		
+		</div>
+
+		<!-- adicione a função onclick addUser() ao botão de login. Essa função addUser() adicionará o
+nome do usuário ao local storage e redirecionará o usuário à página kwitterRoom. -->
+
+		<button id="login_button" class="btn btn-primary" onclick="addUser()">Log in</button>
+		<!-- Explicação do código Button:
+● id - fornecemos uma id para identificação desse botão
+● btn - essa é uma class bootstrap que adicionará padding e removerá as bordas e cores padrões do
+botão.
+● btn-primary - essa class bootstrap adicionará uma border dark blue (azul escuro) e um background
+color (cor de fundo) ao botão.
+● onclick=”addUser()” - "onclick" é um evento que diz ao computador que, quando o usuário clicar
+nesse elemento, deve chamar uma função dentro dele, "addUser()" é uma função chamada quando o
+usuário clica no elemento button. Definiremos essa função no arquivo JS -->
+
+		<br><br>
+	</div>
+</center>
+
+</body>
+</html>

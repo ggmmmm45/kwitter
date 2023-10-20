@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kwitter Room Page</title>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet"><meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+
+<div class="container">
+
+	<!-- 1. Adicione a função onclick logout() ao button logout. Essa função logout() desconecta o usuário do
+app kwitter e o redirecionará à página de login. -->
+	<button id="logout" onclick="logout();" class="glyphicon glyphicon-log-out btn btn-danger">Logout</button>
+	<!-- Explicação do código Button:
+● id - fornecemos uma id para identificar esse botão.
+● glyphicon glyphicon-log-out - essa class bootstrap adicionará o ícone de logout dentro do
+button. 
+● onclick=”logout()” - "onclick" é um evento que diz ao computador que, quando o usuário clicar
+nesse elemento, deve chamar uma função dentro dele, "logout()" é uma função chamada
+quando o usuário clica no elemento button. Definiremos essa função no arquivo JS
+-->
+
+
+	<center>
+		<h1  class="header">	
+			Kwitter	
+			<sup>
+				<img src="m2.png">
+			</sup>
+		</h1>
+
+		<!-- 2. Agora, adicione id="userName" à tag h3 que possui class=”color_white”, essa tag h3 será
+utilizada para conter o nome do usuário. Assim: -->
+		<h3 id="user_name" class="color_white"></h3>
+		<!-- ● Fornecermos uma id à tag h3, para que possamos referir a ela com sua id e atualizar esse
+		elemento HTML com “Bem-vindo(a)” + userName +”!” a partir do código JS. -->
+
+
+		<div class="form-group input_div_room_page">
+			<label>#Add Room:</label>
+
+			<!-- 3. Agora, adicione uma input box para aceitar o nome da sala: -->
+			<input type="text" id="room_name" class="form-control" placeholder="#Room Name">
+			<!-- Explicação do código Input box -
+● type = “text ” - denota que essa input box aceitará a inserção em forma de texto
+● id - fornecemos uma id para identificar essa input box
+● class=”form-control” - essa é uma class bootstrap, que adiciona padding, margin e border à
+input box.
+● placeholder - é como uma dica para o que o usuário deve inserir na input box -->
+
+		</div>
+
+		<!-- 4. Agora, adicione a função onclick addRoom() ao botão adicionar sala. Essa função addRoom()
+adicionará o nome da sala no local storage e no banco de dados firebase, em seguida redireciona o
+usuário para kwitter_page. -->
+		<button onclick="addRoom();" class="btn btn-success">#Add Room</button>
+		<!-- Explicação do código Button:
+● id - fornecemos uma id para identificação desse botão
+● btn - essa é uma class bootstrap que adicionará padding e removerá as bordas e cores
+padrões do botão.
+● btn-success - essa class bootstrap adicionará a cor light green (verde claro) à border e à
+background color do button.
+● onclick=”addRoom()” - "onclick" é um evento que diz ao computador que, quando o usuário
+clicar nesse elemento, deve chamar uma função dentro dele, "addRoom()" é uma função
+chamada quando o usuário clica no elemento button. Definiremos essa função no arquivo JS -->
+
+		<h3 class="color_white">#TRENDINGROOMS</h3>
+
+		<!-- 5. Adicione uma div com id=”output”, essa tag div será utilizada para conter todos os nomes das salas. -->
+		<div id="output"></div>
+		<!-- ● Fornecemos uma id à tag div tag, para que possamos referir a ela com sua id e atualizar esse
+elemento HTML, que está adicionando os nomes às salas. -->
+		
+	</center>
+</div>
+
+
+<script src="kwitter_room.js"></script>
+</body>
+</html>
